@@ -1,0 +1,15 @@
+##Spring Configuration
+server:
+  port: 8080
+spring:
+  application:
+    name: kafka-ejercicio
+  devtools:
+    add-properties: false
+  kafka:
+    consumer:
+      auto-offset-reset: "latest"
+      group-id: "kafka-ejercicio"
+    bootstrap-servers: ""
+kafka-stream-properties:
+  vehiclesStatusInboundTopic: "queueing.vehicles.status"

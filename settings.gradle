@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        //mavenLocal()
+        //maven { url '...' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'kafka-ejercicio'
+
+include ':app-service'
+include ':model'
+include ':usecase'
+project(':app-service').projectDir = file('./applications/app-service')
+project(':model').projectDir = file('./domain/model')
+project(':usecase').projectDir = file('./domain/usecase')
+include ':source-info'
+project(':source-info').projectDir = file('./infrastructure/entry-points/source-info')
+include ':sourceinfo'
+project(':sourceinfo').projectDir = file('./infrastructure/entry-points/sourceinfo')
+include ':crosshelpers'
+project(':crosshelpers').projectDir = file('./infrastructure/helpers/crosshelpers')

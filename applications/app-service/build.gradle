@@ -1,0 +1,31 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+	implementation project( ':crosshelpers')
+	implementation project( ':sourceinfo')
+	implementation project( ':source-info')
+    implementation project(':model')
+    implementation project(':usecase')
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    implementation 'org.springframework.kafka:spring-kafka:2.9.0'
+    implementation 'org.apache.kafka:kafka-streams:3.3.1'
+    implementation 'org.apache.kafka:kafka-clients:3.3.1'
+
+    runtimeOnly('org.springframework.boot:spring-boot-devtools')
+}
+
+tasks.register('explodedJar', Copy) {
+    with jar
+    into "${buildDir}/exploded"
+}
+
+jar {
+    // To disable the *-plain.jar
+    enabled = false
+}
+
+bootJar {
+    // Sets output jar name
+    archiveFileName = "${project.getParent().getName()}.${archiveExtension.get()}"
+}
