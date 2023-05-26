@@ -13,9 +13,9 @@
             <option value="$PROJECT_DIR$/applications/app-service" />
             <option value="$PROJECT_DIR$/domain/model" />
             <option value="$PROJECT_DIR$/domain/usecase" />
-            <option value="$PROJECT_DIR$/infrastructure/entry-points/source-info" />
             <option value="$PROJECT_DIR$/infrastructure/entry-points/sourceinfo" />
             <option value="$PROJECT_DIR$/infrastructure/helpers/crosshelpers" />
+            <option value="$PROJECT_DIR$/infrastructure/helpers/shemaavro" />
           </set>
         </option>
       </GradleProjectSettings>

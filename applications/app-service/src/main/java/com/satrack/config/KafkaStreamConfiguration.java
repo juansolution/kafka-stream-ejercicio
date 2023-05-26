@@ -44,7 +44,7 @@ public class KafkaStreamConfiguration {
         Map<String, Object> props = new HashMap<>();
         props.put(APPLICATION_ID_CONFIG, applicationName);
         props.put(BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        //props.put(STATE_DIR_CONFIG,"./rocksdb");
+        props.put(STATE_DIR_CONFIG,"./rocksdb");
         props.put(DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
         props.put(DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
         props.put(MAX_REQUEST_SIZE_CONFIG , "41943040");
